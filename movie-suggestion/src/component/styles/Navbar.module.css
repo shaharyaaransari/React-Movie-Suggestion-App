@@ -1,0 +1,61 @@
+.navhead {
+  background-color: rgb(55, 71, 79);
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.inputbox {
+  margin: 10px auto;
+  /* Adjust margin as needed */
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: auto;
+}
+
+.navhead input {
+  margin: 10px;
+  width: 250px;
+  height: 28px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  outline: none;
+
+  background-color: rgb(180, 183, 185);
+}
+
+.button {
+  background-color: rgb(180, 183, 185);
+  border: none;
+  border-radius: 10px;
+  margin-right: 4.4px;
+  cursor: pointer;
+  width: 30px;
+  padding: 4px;
+  position: absolute;
+  right: 5px;
+}
+
+.link {
+  display: flex;
+  gap: 30px;
+  margin: 10px 0px;
+}
+
+.link a {
+  font-size: 29px;
+  color: white;
+  text-decoration: none;
+}
+
+.title {
+
+  color: rgb(197, 19, 19);
+  margin: 10px 0;
+  /* Adjust margin as needed */
+}
