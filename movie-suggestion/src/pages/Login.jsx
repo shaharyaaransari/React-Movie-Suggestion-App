@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext,  useState } from 'react'
 import styles from "../component/styles/Login.module.css"
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'

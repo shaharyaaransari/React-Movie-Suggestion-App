@@ -1,21 +1,42 @@
 .navhead {
-  background-color: rgb(55, 71, 79);
-  height: 55px;
+  background-color: #2D313A;
+  height: 65px;
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 1px 5px black;
 }
 
-.inputbox {
-  margin: 10px auto;
+.icon {
+  /* margin: 10px auto; */
   /* Adjust margin as needed */
+     width: 500px;
   display: flex;
   align-items: center;
   position: relative;
-  margin: auto;
+  margin:  auto;
+    justify-content: space-between;
+     color: white;
 }
-
+.icon div{
+     margin-top: 10px;
+     
+   
+}
+.icon p {
+     margin-top: 10px;
+   
+}
+  .icon a {
+     text-decoration: none;
+        color: white;
+      
+  }
+  .icon a:hover {
+    text-decoration: none;
+      color: rgb(229, 232, 235); 
+  }
 .navhead input {
   margin: 10px;
   width: 250px;
@@ -55,7 +76,7 @@
 
 .title {
 
-  color: rgb(197, 19, 19);
+  color: rgb(249, 246, 246);
   margin: 10px 0;
   /* Adjust margin as needed */
 }
@@ -84,3 +105,50 @@
 .navhead a:hover {
   text-decoration: none; 
 }
+
+
+/* Existing styles... */
+
+/* Hamburger Icon */
+.hamburger {
+  display: none; /* Hide the hamburger icon by default for large screens */
+}
+
+/* Styles for the menu */
+.menu {
+  display: none; /* Hide the menu by default for large screens */
+  /* Add styles for the menu, such as background color, padding, etc. */
+}
+
+/* Media query for mid-sized screens (e.g., tablets) */
+@media (max-width: 768px) {
+  .icon {
+    display: none; /* Hide the existing icons for mid-sized screens */
+  }
+
+  .hamburger {
+    display: block; /* Show the hamburger icon for mid-sized screens */
+    cursor: pointer;
+  }
+
+  .menu {
+    display: flex; /* Show the menu for mid-sized screens */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Add additional styling for the menu items if needed */
+  .menu a {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* Media query for small screens (e.g., mobile) */
+@media (max-width: 480px) {
+  /* Add specific styles for small screens if needed */
+}
+
+/* Additional styles for other components... */

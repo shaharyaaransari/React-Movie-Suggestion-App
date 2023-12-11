@@ -1,7 +1,10 @@
 import React from 'react'
-
+import { Trending } from '../component/Movies/Trending/Trending'
 export default function Homepages() {
   return (
-    <div>Homepages</div>
+    <div>
+  
+  <Trending/>
+    </div>
   )
 }
