@@ -59,3 +59,28 @@
   margin: 10px 0;
   /* Adjust margin as needed */
 }
+
+.link button {
+  width: 100px;
+  color: white;
+  border: none;
+  font-size: 15px;
+  border-radius: 10px;
+  background-color: rgba(31, 31, 37, 0.605);
+}
+
+.navhead h3{
+   
+      color: rgba(255, 255, 255, 0.68);
+        font-style: italic;
+       margin-right: 100px;
+}
+
+.navhead a {
+  text-decoration: none; 
+  
+}
+
+.navhead a:hover {
+  text-decoration: none; 
+}

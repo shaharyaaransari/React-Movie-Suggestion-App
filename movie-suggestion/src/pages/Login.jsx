@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from "../component/styles/Login.module.css"
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+  import {Navigate} from "react-router-dom"
+import { AuthContext } from '../component/contextApi/AuthContext'
 export const Login = () => {
   const intailValue = { username: "", email: "", password: "" }
   const [details, setDetails] = useState(intailValue);
   const [formErorr, setFormError] = useState({})
   const [show, setShow] = useState(false);
+    const {isAuth,setAuth} = useContext(AuthContext)
   const handleChange = (e) => {
     const { name, value } = e.target;
     setDetails({ ...details, [name]: value })
@@ -55,7 +58,11 @@ export const Login = () => {
           title: <i>Login successfull.</i>,
       
         })
-        console.log("Success");
+        setAuth(true);
+         
+      
+
+       
       } else {
         withReactContent(Swal).fire({
           title: <i>Invalid email or password.</i>, 
@@ -70,6 +77,11 @@ export const Login = () => {
     }
     setDetails(intailValue)
   }
+
+  if(isAuth){
+    return <Navigate to ="/favrouite"/>
+      
+}  
   return (
     <div >  
       <div className={`${styles.back}`}>
