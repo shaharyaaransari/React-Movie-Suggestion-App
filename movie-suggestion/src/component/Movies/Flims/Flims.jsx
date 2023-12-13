@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import CustomPagination from '../../Pagination/CustomPagination';
 import MovieCard from '../../MovieCard/MovieCard';
 import Genres from '../../Genres';
+import useGenres from '../../../hooks/useGenres';
 
 export const Flims = () => {
   const [page,setPage] = useState(1)
@@ -10,8 +11,9 @@ export const Flims = () => {
   const [data, setData] = useState([]);
     const [selectGenres,setSelectGenres] = useState([]) 
     const [genres,setGenres] = useState([]) 
+      const genreforUrl = useGenres(selectGenres)
   const fetchData = () => {
-    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`)
+    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&page=${page}&with_genres=${genreforUrl}`)
       .then((res) => {
       
          setTotalPages(res.data.total_pages)
@@ -24,7 +26,7 @@ export const Flims = () => {
 
   useEffect(() => {
     fetchData()
-  }, [page])
+  }, [page,genreforUrl])
   return (
     <div>
   <span className='pageTitle'> discover movies</span>
