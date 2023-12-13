@@ -1,4 +1,7 @@
 .navhead {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background-color: #2D313A;
   height: 65px;
   display: flex;
@@ -78,6 +81,7 @@
 
   color: rgb(249, 246, 246);
   margin: 10px 0;
+ 
   /* Adjust margin as needed */
 }
 
@@ -107,48 +111,3 @@
 }
 
 
-/* Existing styles... */
-
-/* Hamburger Icon */
-.hamburger {
-  display: none; /* Hide the hamburger icon by default for large screens */
-}
-
-/* Styles for the menu */
-.menu {
-  display: none; /* Hide the menu by default for large screens */
-  /* Add styles for the menu, such as background color, padding, etc. */
-}
-
-/* Media query for mid-sized screens (e.g., tablets) */
-@media (max-width: 768px) {
-  .icon {
-    display: none; /* Hide the existing icons for mid-sized screens */
-  }
-
-  .hamburger {
-    display: block; /* Show the hamburger icon for mid-sized screens */
-    cursor: pointer;
-  }
-
-  .menu {
-    display: flex; /* Show the menu for mid-sized screens */
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Add additional styling for the menu items if needed */
-  .menu a {
-    margin: 10px 0;
-    font-size: 1.2em;
-    color: white;
-    text-decoration: none;
-  }
-}
-
-/* Media query for small screens (e.g., mobile) */
-@media (max-width: 480px) {
-  /* Add specific styles for small screens if needed */
-}
-
-/* Additional styles for other components... */

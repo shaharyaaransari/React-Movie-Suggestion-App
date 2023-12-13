@@ -13,7 +13,7 @@ export const Navbar = () => {
 
   return (
     <div className={`${styles.navhead}`}>
-      <Link to="/"> <h2 className={`${styles.title}`}>MovieFlix</h2></Link>
+      <Link to="/"> <h2 className={`${styles.title}`} onClick={()=>window.scroll(0,0)}>MovieFlix</h2></Link>
       <div className={`${styles.icon}`}>
         <Link to="/series">
           <div>
