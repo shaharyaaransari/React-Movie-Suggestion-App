@@ -9,6 +9,7 @@ import { makeStyles } from '@material-ui/core';
 import axios from 'axios';
 import { img_300, unavailable } from '../config/config';
 import { Button } from '@mui/material';
+import Carousal from '../Carousal/Carousal';
 
 const useStyles = makeStyles((theme) => ({
     modal: {
@@ -51,7 +52,7 @@ export default function ContentModal({children, media_type,id}) {
   const fetchVideo = () => {
     axios.get(`https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`)
       .then((res) => {
-        console.log(res.data)
+     //   console.log(res.data)
         setVideo(res.data.results[0]?.key);
        // Corrected variable name
       })
@@ -123,7 +124,9 @@ useEffect(()=>{
                 <span className="ContentModal__description">
                   {data.overview}
                 </span>
-                <div></div>
+                <div>
+                  <Carousal media_type={media_type} id={id}/>  
+                </div>
                 <Button
                   variant="contained"
                   startIcon={<YouTubeIcon />}
