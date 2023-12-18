@@ -42,7 +42,7 @@ export const Flims = () => {
        data && data.map((el) => {
          return <MovieCard key={el.id} title={el.title || el.name}
           date={el.first_air_date || el.release_date} id={el.id} poster={el.poster_path}
-           media_type={el.media_type} vote_average
+           media_type="movie" vote_average
          ={el.vote_average
          } />
        })

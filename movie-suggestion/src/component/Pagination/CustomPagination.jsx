@@ -1,13 +1,13 @@
 import React from 'react'
 import Pagination from "@material-ui/lab/Pagination";
-  import { ThemeProvider, createMuiTheme} from "@material-ui/core"
-  import "./pagination.css"
+  import { ThemeProvider} from "@material-ui/core"
+  import { createTheme } from '@material-ui/core/styles'
 function CustomPagination({totalPages=10,setPage}) {
       const handlePage = (value)=>{
         setPage(value)
           window.scroll(0,0)
       }
-      const darkTheme = createMuiTheme({
+      const darkTheme = createTheme({
         palette: {
           type: "dark",
         },
