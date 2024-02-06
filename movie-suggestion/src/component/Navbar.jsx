@@ -42,7 +42,7 @@ export const Navbar = () => {
       </div>
       {isAuth ? <h3>{details.username}</h3> : null}
       <div className={`${styles.link}`}>
-        {!isAuth ? <Link to="/login"><BsPerson /></Link> : <button onClick={() => setAuth(!isAuth)}>Logout</button>}
+        {!isAuth ? <Link to="/login"><BsPerson /></Link> : <button style={{cursor:"pointer"}} onClick={() => setAuth(!isAuth)}>Logout</button>}
         <Link to="/favrouite"><CiHeart /></Link>
       </div>
     </div>

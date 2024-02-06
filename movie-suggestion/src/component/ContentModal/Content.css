@@ -10,6 +10,9 @@
   object-fit: contain;
   border-radius: 10px;
 }
+.heartClicked {
+  color: red;
+}
 
 .tagline {
   padding-bottom: 10px;
@@ -43,10 +46,26 @@
 
 .ContentModal__title {
   height: 12%;
-  font-size: 5vw;
+  font-size: 3vw;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.ContentModal__fav {
+  height: 12%;
+  font-size: 5vw;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin-left: 700px;
+  /* justify-content: center;  */
+}
+
+
+.tagline {
+  margin-left: 25px;
+
 }
 
 .ContentModal__description {
@@ -55,7 +74,8 @@
   overflow-y: scroll;
   padding: 15px;
   border-radius: 20px;
-  scrollbar-width: thin; /* Firefox */
+  scrollbar-width: thin;
+  /* Firefox */
   box-shadow: inset 0 0 5px #000000;
   text-align: justify;
 }
@@ -68,24 +88,30 @@
   .ContentModal__landscape {
     display: none;
   }
+
   .ContentModal__portrait {
     display: flex;
     width: 38%;
   }
+
   .ContentModal {
     flex-direction: row;
     justify-content: space-around;
     padding: 10px 0;
   }
+
   .ContentModal__about {
     width: 58%;
     padding: 0;
     height: 100%;
   }
+
   .ContentModal__title {
     font-size: 3.5vw;
   }
+
   .ContentModal__description {
     font-size: 22px;
   }
 }
+
